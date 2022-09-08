@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample work</title>
+</head>
+<style type="text/css">
+	#block{
+		position: relative;
+    width: 40%;
+    height: 89px;
+    box-shadow: 2px 2px 10px black;
+   top: 10%;
+   left: 30%;
+}
+    #main{
+    	position: fixed;
+    width: 70%;
+    height: 70%;
+    box-shadow: 2px 2px 10px black;
+    left: 15%;
+    top: 15%;
+    text-align: center;
+    }
+	#input{
+		position: relative;
+		width: 30%;
+		height: 40px;
+	}
+</style>
+<body>
+<div id="main">
+<input type="number" placeholder="NUMBER" id="input" onchange="fun()">
+<div id="block"></div>
+</div>
+<script type="text/javascript">
+var x =document.getElementById('input');
+
+
+	function fun(){
+		if(x.value<0){
+			document.getElementById("block").innerText="Please put positive values";
+		}
+		else{var a,b,c;
+			a=parseInt(x.value)+2;
+			b=parseInt(x.value)+4;
+			c=parseInt(x.value)+6;
+
+			document.getElementById("block").innerText=(a+","+b+","+c);
+		}
+	};
+
+</script>
+</body>
+</html>
